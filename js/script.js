@@ -48,7 +48,17 @@ const app = new Vue({
     },
 
     methods: {
+        deleteTodo(todoPosition) {
+            console.log('original', this.todos);
 
+            const beginArray = this.todos.slice(0, todoPosition);
+            console.log('slice (inizio)', beginArray);
+
+            const endArray = this.todos.slice(todoPosition + 1);
+            console.log('slice (fine)', endArray);
+
+            this.todos = [...beginArray, ...endArray];
+        }
     },
 
 })

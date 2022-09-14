@@ -21,8 +21,10 @@
             <div class="todo-list-container">
                 <h2>Da Fare</h2>
                 <ul>
-                    <li v-for="todo in todos" :class="{ active: todo.done }">
+                    <li v-for="(todo,index) in todos" :class="{ active: todo.done }">
                         <span>
+                            <!-- <input type="checkbox"> -->
+                            <button class="delete-btn" @click="deleteTodo(index)">X</button>
                             {{ todo.text }}
                         </span>
                     </li>
