@@ -15,7 +15,20 @@
 
 <body>
     <div id="app">
+        <div class="container">
+            <h1>To-Do List</h1>
 
+            <div class="todo-list-container">
+                <h2>Da Fare</h2>
+                <ul>
+                    <li v-for="todo in todos" :class="{ active: todo.done }">
+                        <span>
+                            {{ todo.text }}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 

@@ -21,11 +21,29 @@ console.log('JS OK!');
         (se done era uguale a false, impostare true e viceversa)
 */
 
+const todos = [
+    {
+        text: 'Fare la spesa',
+        done: false
+    },
+    {
+        text: 'Fare i compiti',
+        done: true
+    },
+    {
+        text: 'Fare il bucato',
+        done: false
+    },
+]
+
+console.log(todos);
+
 
 const app = new Vue({
     el: '#app',
 
     data: {
+        todos,
 
     },
 
