@@ -6,6 +6,9 @@
 
 body {
     font-family: sans-serif;
+    background-color: #ccc;
+
+
 }
 
 .container {
@@ -14,10 +17,22 @@ body {
     padding: 20px;
 }
 
+.container h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
 .todo-list-container {
-    margin-top: 80px;
+    margin-top: 20px;
     border: 1px solid darkgrey;
     padding: 30px;
+    border-radius: 10px;
+    background-color: darkblue;
+
+}
+
+.todo-list-container h2 {
+    color: white;
 }
 
 .todo-list-container ul {
@@ -29,14 +44,28 @@ body {
     margin: 10px 0;
     padding: 20px;
 
+
 }
 
-.active {
+.done {
     text-decoration: line-through;
     color: grey;
 }
 
 .delete-btn {
+    padding: 2px 5px;
+    margin-right: 10px;
+}
+
+.add-btn {
+    padding: 2px 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid black;
     padding: 2px 5px;
     margin-right: 10px;
 }

@@ -43,21 +43,36 @@ const app = new Vue({
     el: '#app',
 
     data: {
+        newTodo: '',
         todos,
 
     },
 
     methods: {
-        deleteTodo(todoPosition) {
+        toggleTodo(todo) {
+            todo.done = !todo.done;
+        },
+
+        deleteTodo(i) {
             console.log('original', this.todos);
 
-            const beginArray = this.todos.slice(0, todoPosition);
+            const beginArray = this.todos.slice(0, i);
             console.log('slice (inizio)', beginArray);
 
-            const endArray = this.todos.slice(todoPosition + 1);
+            const endArray = this.todos.slice(i + 1);
             console.log('slice (fine)', endArray);
 
             this.todos = [...beginArray, ...endArray];
+        },
+
+        addTodo() {
+            console.log(this.newTodo);
+            const newTodo = {
+                text: this.newTodo,
+                done: false,
+            }
+            this.todos.push(newTodo);
+            this.newTodo = '';
         }
     },
 
